@@ -27,18 +27,54 @@
         justify-content:centre;
         position :absolute;
         top:0;
-        right:0;
+        left:0;
         width:65%;
         height:100%;
-        background :linear-gradient(135deg, #f52e0b, #f2fa09);  /* this is used to make a line inside the box  */
-        clip-path : polygon(0 0, 100% 0, 100% 100%, 80% 100%);  /* here this command help the line to convert into diagnol */
+        background :linear-gradient(150deg, #f52e0b, #f2fa09);  /* this is used to make a line inside the box  */
+        clip-path : polygon(0 0, 100% 0, 10% 100%, 0% 100%);  /* here this command help the line to convert into diagnol */
         padding-left: 0.5%; /* this is use to increase or decrease the area of the specific selected area */
     }
+    .welcome-area h1{
+        margin-left: 10%; /* margin basically help to move the text */
+        margin-top: 20%;
+        font-size : 60px;
+    }
+    .form-area h1{
+        font-size : 30px;
+        margin-left : 65%;
+        margin-top : 20px;
+        margin-right: 10px;
+        font-style:italic
+    }
+    .form-area h2{
+        margin-left: 55%;
+        margin-top: 50px;
+        font-size: 20px;
+        font-style:oblique;
+    }
+    input{
+        border:none; /* removes the line of border */
+        border-bottom: 2px solid #ccc; /* use to add bottom border not box for username */
+        border-radius: 0px; /* this is used to make the corner of the input box rounded */
+        padding : 8px 8px; /* use to increase or decrease the length and height of input box */
+        outline: none;
+        background: tranparent;
+        font-size: 15px;
+        margin-left: 10%;
+        margin-top: 4%;
+        transition: 0.3s;
+        width: 60%; /* use to increase or decrease the length of the input box */
+    } 
 </style>
 <body>
     <div class="login-box">
         <div class ="welcome-area">
-            <h1>WELCOME </h1>
+            <h1>Create Your <br> Account 😎 </h1>
+        </div>
+        <div class = "form-area">
+            <h1>New User Registration</h1>
+            <h2><input type="text" placeholder="Enter username"></h2>
+            <h2><input type="password" placeholder="Enter password"></h2>
         </div>
     </div>
 </body>

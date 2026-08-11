@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content : center ;
+        background-color : black ;
+        align-items : center;
+        height : 100vh;
+
+    }
+    .login-box{
+        position : relative;
+        background  : white;
+        height : 400px;
+        width:800px;
+        border-radius: 16px; /* make the corner rounded */
+        overflow: hidden; /* use here to make the radius as it is at the corner just */ 
+    }
+    .welcome-area{
+        display: flex; /* this is necessary to use so the below two properties work*/
+        align-items:centre;
+        justify-content:centre;
+        position :absolute;
+        top:0;
+        right:0;
+        width:50%;
+        height:100%;
+        background :linear-gradient(135deg, #f52e0b, #f2fa09);  /* this is used to make a line inside the box  */
+        clip-path : polygon(30% 0, 100% 0, 100% 100%, 0 100%);  /* here this command help the line to convert into diagnol */
+        padding-left: 0.5%; /* this is use to increase or decrease the area of the specific selected area */
+    }
+    .welcome-area h1{
+        margin-left: 30%; /* margin basically help to move the text */
+        margin-top: 30%;
+        font-size : 45px;
+    }
+    .form-area h1{
+        font-size: 35px;
+        margin-left: 10%;
+        font-style:italic
+    }
+    input{
+        border:none; /* removes the line of border */
+        border-radius:10px; /* make the corner rounded rather than sharp */
+        padding : 14px 40px; /* use to increase or decrease the length and height of input box */
+        outline: none;
+        background-color: rgb(46, 167, 211);
+        font-size: 15px;
+        margin-left: 10%;
+        margin-top: 3%;
+        transition: 0.3s;
+    } 
+</style>
+<body>
+    <div class ="login-box">
+        <div class = "welcome-area">
+            <h1>WELCOME <br> Back! 😀</h1>
+        </div>
+        <div class ="form-area">
+            <h1>Login Form</h1>
+            <h2><input type="text" placeholder="Username"></h2>
+            <h2><input type="password" placeholder="Password"></h2>
+        </div>
+        <div class ="submitbutton">
+            <input type="submit" value="Login">
+        </div>
+    </div>
+</body>
+</html>

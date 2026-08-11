@@ -16,8 +16,8 @@
     .login-box{
         position : relative;
         background  : white;
-        height : 400px;
-        width:800px;
+        height : 600px;
+        width:1000px;
         border-radius: 16px; /* make the corner rounded */
         overflow: hidden; /* use here to make the radius as it is at the corner just */ 
     }
@@ -28,33 +28,49 @@
         position :absolute;
         top:0;
         right:0;
-        width:50%;
+        width:65%;
         height:100%;
         background :linear-gradient(135deg, #f52e0b, #f2fa09);  /* this is used to make a line inside the box  */
-        clip-path : polygon(30% 0, 100% 0, 100% 100%, 0 100%);  /* here this command help the line to convert into diagnol */
+        clip-path : polygon(0 0, 100% 0, 100% 100%, 80% 100%);  /* here this command help the line to convert into diagnol */
         padding-left: 0.5%; /* this is use to increase or decrease the area of the specific selected area */
     }
     .welcome-area h1{
-        margin-left: 30%; /* margin basically help to move the text */
-        margin-top: 30%;
-        font-size : 45px;
+        margin-left: 50%; /* margin basically help to move the text */
+        margin-top: 20%;
+        font-size : 50px;
     }
     .form-area h1{
-        font-size: 35px;
-        margin-left: 10%;
+        font-size: 45px;
+        margin-left: 13%;
         font-style:italic
+    }
+    .form-area h3{
+        margin-left: 20%;
+        margin-top: 40px;
+        font-size: 20px;
+        font-style:oblique;
+    }
+    .form-area h4{
+        margin-left: 25%;
+        font-size: 20px;
+        font-style:oblique;
     }
     input{
         border:none; /* removes the line of border */
-        border-radius:10px; /* make the corner rounded rather than sharp */
-        padding : 14px 40px; /* use to increase or decrease the length and height of input box */
+        border-bottom: 2px solid #ccc; /* use to add bottom border not box for username */
+        border-radius: 0px; /* this is used to make the corner of the input box rounded */
+        padding : 8px 4px; /* use to increase or decrease the length and height of input box */
         outline: none;
-        background-color: rgb(44, 136, 170);
+        background: tranparent;
         font-size: 15px;
         margin-left: 10%;
-        margin-top: 3%;
+        margin-top: 4%;
         transition: 0.3s;
+        width: 40%;
     } 
+    input::placeholder{
+        color : black;
+    }
 </style>
 <body>
     <div class ="login-box">
@@ -62,10 +78,12 @@
             <h1>WELCOME <br> Back! 😀</h1>
         </div>
         <div class ="form-area">
-            <h1>Login Form</h1>
+            <h1>Login</h1>
             <h2><input type="text" placeholder="Username"></h2>
-            <h2><input type="password" placeholder="Password"></h2>
+            <h2><input type="password" placeholder="Password" ></h2>
             <input type="submit" value="Login">
+            <h3>Don't Have Account ?</h3>
+            <h4><a href="register.html">Sign Up</a></h4>
         </div>
     </div>
 </body>
